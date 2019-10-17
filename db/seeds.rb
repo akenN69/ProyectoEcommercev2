@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.destroy_all
+User.destroy_all
+9.times do |i|
+    articles = ["Carteras", "Fundas", "Estatuas", "Separador", "Cajas", "Copas", "Telefono", "Porta Velas", "Almohada"]
+    Product.create(
+        name: "#{articles[i]}",
+        photo: "#{i+1}.jpeg"
+        )
+end
