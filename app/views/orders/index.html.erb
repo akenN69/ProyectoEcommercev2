@@ -27,13 +27,10 @@
     </tbody>
   </table>
 
-  <%
-=begin%>
- <%= link_to 'Limpiar carro', clean_orders_path, class: 'btn btn-outline-danger'  %>
+  <%= link_to 'Limpiar carro', clean_orders_path, class: 'btn btn-outline-danger'  %>
   <%= link_to 'Confirmar compra', pre_pay_billings_path, class: 'btn btn-success float-right' %> 
    
-<%
-=end%>
+
   <% else %>
     <p>No tienes productos en tu carro de compra.</p>
   <% end %>
