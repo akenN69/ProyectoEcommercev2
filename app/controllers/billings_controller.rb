@@ -1,14 +1,14 @@
 class BillingsController < ApplicationController
     def pre_pay
         orders = current_user.orders.where(payed: false)
-        total = orders.pluck("price * quantity").sum() 
+        total = orders.pluck("total_price * quantity_product").sum() 
         items = orders.map do |order|
             item = {}
             item[:name] = order.product.name
             item[:sku] = order.id.to_s
-            item[:price] = order.price.to_s
+            item[:price] = order.total_price.to_s
             item[:currency] = 'USD'
-            item[:quantity] = order.quantity
+            item[:quantity] = order.quantity_product
             item
         end
 
