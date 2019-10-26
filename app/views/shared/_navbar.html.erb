@@ -21,12 +21,13 @@
         <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
                 <li class="nav-item active">
-                    <a class="nav-link" href="<%= orders_path %>"><%= image_tag "https://image.flaticon.com/icons/svg/204/204283.svg", class: "micarro" %><%= "(#{Product.all.count})" %><%= "(#{Product.order(current_user).count})" %><span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<%= orders_path %>"><%= image_tag "https://image.flaticon.com/icons/svg/204/204283.svg", class: "micarro" %><%= "(#{(current_user).orders.count})" %><span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item myuser">
                     <a class="nav-link"><%= current_user.email %></a>
                 </li>
-                <li class="nav-item">
+                <br>
+                <li class="nav-item closesession">
                     <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: 'nav-link' %>
                 </li> 
                 
