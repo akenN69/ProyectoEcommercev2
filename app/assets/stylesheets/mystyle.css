@@ -182,7 +182,7 @@
 }
 
 .micarro{
-  width: 80px;
+  width: 58px;
   height: 45px;
 }
 .mycard{
@@ -222,8 +222,17 @@ body{
   max-height: 45px;
   max-width: 100%;
   color: white;
-  font-family: georgia;
+  font-family: Georgia;
 }
 .nav-link{
   color:white !important;
+  font-family: Georgia !important;
+}
+.mytitle{
+  color:white !important;
+  font-family: Georgia;
+}
+
+.mysearch{
+  font-family: Georgia;
 }

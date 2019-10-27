@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
-    <a class="navbar-brand" href="<%= root_path %>">E-Commerce-Seba</a>
+    <a class="navbar-brand mytitle" href="<%= root_path %>">E-Commerce-Seba</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,8 +15,8 @@
                 </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2 mysearch" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn btn-danger my-2 my-sm-0 mysearch" type="submit">Search</button>
         </form>
         <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
@@ -32,10 +32,10 @@
                 </li> 
                 
             <% else %>
-                <li class="nav-item">
+                <li class="nav-item myuser">
                     <%= link_to 'Iniciar sesión', new_user_session_path, class: 'nav-link' %>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item closesession">
                     <%= link_to 'Registrarse',  new_user_registration_path, class: 'nav-link'%>
                 </li>
             <% end %>
