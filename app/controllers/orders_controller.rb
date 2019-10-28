@@ -1,8 +1,10 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
   def create
     p = Product.find(params[:product_id])
     o = Order.find_or_create_by(user: current_user, product: p, payed: false)
     o.quantity_product += 1
+    o.total_price = p.unit_price
     
     if o.save
       redirect_to products_path, notice: "El producto ha sido agregado al carro."

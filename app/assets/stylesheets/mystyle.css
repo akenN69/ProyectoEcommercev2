@@ -182,7 +182,7 @@
 }
 
 .micarro{
-  width: 80px;
+  width: 58px;
   height: 45px;
 }
 .mycard{
@@ -201,4 +201,38 @@
 .myitem{
   max-width: 380px;
   max-height: 390px;
+}
+
+body{
+  background-image: linear-gradient(to right top, #d7ebe9, #b9e0e1, #9ad5de, #7ac8dd, #59bbde, #38b0e3, #13a3e7, #0095e9, #0085ed, #0072ed, #005eea, #3d44e1);
+}
+
+.myuser{
+  border: 1px solid;
+  border-radius: 126px;
+  max-height: 45px;
+  max-width: 100%;
+  color: white;
+  font-family: georgia;
+}
+
+.closesession{
+  border: 1px solid;
+  border-radius: 126px;
+  max-height: 45px;
+  max-width: 100%;
+  color: white;
+  font-family: Georgia;
+}
+.nav-link{
+  color:white !important;
+  font-family: Georgia !important;
+}
+.mytitle{
+  color:white !important;
+  font-family: Georgia;
+}
+
+.mysearch{
+  font-family: Georgia;
 }

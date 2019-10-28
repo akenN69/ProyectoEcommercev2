@@ -27,3 +27,28 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+<div class="container">
+  <div class="row">
+    
+     
+        <div class="col myitem">
+          <div class="card mycard">
+          
+              <%= image_tag @product.photo, class: 'card-img-top myphoto' %>
+            
+            <div class="card-body">
+              <h5> <%= @product.name %> </h5>
+              <h4><%= number_to_currency(@product.unit_price, precision: 0) %></h4>
+              <h4><%= @product.description %></h4>
+              <h4><%= @product.stock %></h4>
+              <%= link_to 'Back', products_path %>
+              
+            </div>
+          </div>
+        </div>
+      
+      <div class="w-100" style="margin-top:20px;"> </div>
+    
+  </div>
+</div>

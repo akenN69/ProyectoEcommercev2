@@ -14,15 +14,17 @@
       <% row.each do |product| %>
         <div class="col myitem">
           <div class="card mycard">
-            <%= image_tag product.photo, class: 'card-img-top myphoto' %>
+            <%= link_to product do %>
+              <%= image_tag product.photo, class: 'card-img-top myphoto' %>
+            <% end %>
             <div class="card-body">
               <h5> <%= product.name %> </h5>
-              <h4><%= product.unit_price %></h4>
+              <h4><%= number_to_currency(product.unit_price, precision: 0) %></h4>
               <h4><%= product.description %></h4>
               <h4><%= product.stock %></h4>
               <td><%= link_to 'Show', product %></td>
               <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <%= link_to "Agregar al carro", product_orders_path(product), class: 'btn btn-success', method: :post  %>
+              <%= link_to "Agregar al carro", product_orders_path(product), class: 'btn btn-warning', method: :post  %>
               
             </div>
           </div>
