@@ -15,5 +15,16 @@ ActiveAdmin.register Product do
   #   permitted
   # end
   
-  permit_params :name, :photo, :unit_price, :description, :stock
+  permit_params :name, :photo, :unit_price, :description, :stock, :image
+  
+  form do |f|
+    f.semantic_errors # Muestra errores en el formulario
+    f.input :image, as: :file
+    f.input :name
+    f.input :photo
+    f.input :unit_price
+    f.input :description
+    f.input :stock
+    f.actions # Agrega los botones Submit y Cancel
+   end
 end

@@ -15,7 +15,8 @@
         <div class="col myitem">
           <div class="card mycard">
             <%= link_to product do %>
-              <%= image_tag product.photo, class: 'card-img-top myphoto' %>
+            <%= image_tag product.image, class: 'card-img-top myphoto' if product.image.attached? %>
+            <%= image_tag  product.photo, class: 'card-img-top myphoto' %>
             <% end %>
             <div class="card-body">
               <h5> <%= product.name %> </h5>
@@ -37,9 +38,11 @@
 
 <br>
 
-<%
+
+ <%
 =begin%>
- <%= link_to 'New Product', new_product_path %> 
+ <%= link_to 'New Product', new_product_path %>  
 <%
 =end%>
+
 

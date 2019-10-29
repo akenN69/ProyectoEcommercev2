@@ -8,8 +8,8 @@
 
 AdminUser.destroy_all
 Order.destroy_all
-Product.destroy_all
 User.destroy_all
+Product.destroy_all
 AdminUser.create!(email: 'seba.rada@gmail.com', password: '123456', password_confirmation: '123456') if Rails.env.development?
 9.times do |i|
     articles = ["Carteras", "Fundas", "Estatuas", "Separador", "Cajas", "Copas", "Telefono", "Porta Velas", "Almohada"]

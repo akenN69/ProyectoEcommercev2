@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+
+<% if @product.image.attached? %>
+      <%= image_tag @product.image.variant(resize: "100x100") %>
+<% end %>
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @product.photo %>
 </p>
 
 <p>
@@ -38,6 +37,9 @@
               <%= image_tag @product.photo, class: 'card-img-top myphoto' %>
             
             <div class="card-body">
+              <% if @product.image.attached? %>
+                <%= image_tag @product.image.variant(resize: "100x100") %>
+              <% end %>
               <h5> <%= @product.name %> </h5>
               <h4><%= number_to_currency(@product.unit_price, precision: 0) %></h4>
               <h4><%= @product.description %></h4>
