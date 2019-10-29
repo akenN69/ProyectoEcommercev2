@@ -23,4 +23,12 @@ class OrdersController < ApplicationController
     @orders = current_user.orders.where(payed: false)
     @total = @orders.pluck("total_price * quantity_product").sum()
   end
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    respond_to do |format|
+      format.html { redirect_to orders_url, notice: 'order was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 end

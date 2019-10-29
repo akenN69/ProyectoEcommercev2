@@ -7,6 +7,7 @@
         <th>Valor</th>
         <th>Cantidad</th>
         <th>Subtotal</th>
+        <th>Acción</th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
           <td> <%= order.product.unit_price %></td>
           <td> <%= order.quantity_product %> </td>
           <td> <%= order.product.unit_price * order.quantity_product %></td>
+          <td><%= link_to 'Eliminar Producto', order_path(order), method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-warning' %></td>
         </tr>
       <% end %>
       <tr class="table-dark">

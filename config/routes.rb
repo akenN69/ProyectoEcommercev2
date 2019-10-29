@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :products
   devise_for :users
   resources :users
-  resources :orders, only: :index do
+  resources :orders, only: [:index, :destroy] do
   	collection do
   		get 'clean'
   	end
