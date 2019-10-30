@@ -11,29 +11,10 @@
 <br> 
 
 <div class="container">
-  <div class="row">
-    <% @products.each_slice(3) do |row| %>
-      <% row.each do |product| %>
-        <div class="col myitem">
-          <div class="card mycard">
-            <%= link_to product do %>
-            <%= image_tag product.image, class: 'card-img-top myphoto' if product.image.attached? %>
-            <%= image_tag  product.photo, class: 'card-img-top myphoto' %>
-            <% end %>
-            <div class="card-body">
-              <h5> <%= product.name %> </h5>
-              <h4><%= number_to_currency(product.unit_price, precision: 0) %></h4>
-              <h4><%= product.description %></h4>
-              <h4><%= product.stock %></h4>
-              <%= link_to "Agregar al carro", product_orders_path(product), class: 'btn btn-warning', method: :post  %>
-              
-            </div>
-          </div>
-        </div>
-      <% end %>
+  <div class="card-columns">
+      <%= render  @products %>
       <div class="w-100" style="margin-top:20px;"> </div>
-    <% end %>
-  </div>
+    </div>
 </div>
 
 <br>
