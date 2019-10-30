@@ -6,12 +6,9 @@
 <%= render 'shared/carousel' %>
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>Artículos para el hogar</h1>
 
 <br> 
-
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
 
 <div class="container">
   <div class="row">
@@ -28,8 +25,6 @@
               <h4><%= number_to_currency(product.unit_price, precision: 0) %></h4>
               <h4><%= product.description %></h4>
               <h4><%= product.stock %></h4>
-              <td><%= link_to 'Show', product %></td>
-              <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               <%= link_to "Agregar al carro", product_orders_path(product), class: 'btn btn-warning', method: :post  %>
               
             </div>
