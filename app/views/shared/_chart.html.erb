@@ -1,0 +1,5 @@
+<%= javascript_include_tag "application", "chartkick" %>
+
+<%= pie_chart User.group(:email).count %>
+
+<%= column_chart Product.group(:name).count, width: "800px", height: "500px", colors: ["#A8EB12"] %>
