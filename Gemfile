@@ -11,7 +11,7 @@ gem 'pg', group: :production
 gem 'devise'
 gem 'paypal-sdk-rest'
 gem 'activeadmin'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem "chartkick"
 gem 'groupdate'
 # Use Puma as the app server
